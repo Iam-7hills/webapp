@@ -11,7 +11,9 @@ select id, name, lucky from 7hillstable
   </head>
   <body>
 
-  <h2>Results</h2>
+  <h2>Tomcat and MY SQL integration - DevOps</h2>
+<br/>
+<h2>Results</h2>
 
 <c:forEach var="row" items="${rs.rows}">
     NAME: ${row.name}<br/>
