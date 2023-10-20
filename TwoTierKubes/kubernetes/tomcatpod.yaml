@@ -1,13 +1,19 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: applicationpod 
+  name: applicationpod
   labels:
-    env: appdb 
+    env: appdb
 spec:
   containers:
   - image: iam7hills/dockerdemo:mysqldb
     name: app1
+    env:
+      - name: APP_PASSWORD
+        valueFrom:
+          secretKeyRef:
+            name: app-secret
+            key: password
     ports:
     - containerPort: 8080
     imagePullPolicy: Always
