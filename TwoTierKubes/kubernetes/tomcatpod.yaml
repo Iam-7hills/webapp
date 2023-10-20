@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: applicationpod 
+  labels:
+    env: appdb 
+spec:
+  containers:
+  - image: iam7hills/dockerdemo:mysqldb
+    name: app1
+    imagePullPolicy: Always
+    ports:
+    - containerPort: 8080
+    imagePullPolicy: Always
