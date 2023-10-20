@@ -8,12 +8,9 @@ spec:
   containers:
   - image: iam7hills/dockerdemo:mysqldb
     name: app1
-    env:
-      - name: APP_PASSWORD
-        valueFrom:
-          secretKeyRef:
-            name: app-secret
-            key: password
+    envFrom:
+    - secretRef:
+        name: app-secret
     ports:
     - containerPort: 8080
     imagePullPolicy: Always
