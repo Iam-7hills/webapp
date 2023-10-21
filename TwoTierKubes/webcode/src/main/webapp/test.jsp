@@ -1,7 +1,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
-<sql:query var="rs" dataSource="jdbc/7hillsdb">
+<sql:query var="rs" dataSource="jdbc/TestDB">
 select id, name, lucky from 7hillstable
 </sql:query>
 
