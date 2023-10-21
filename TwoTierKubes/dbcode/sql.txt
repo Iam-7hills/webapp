@@ -1,5 +1,11 @@
 
+If you are running this in your container:
+------------------------------------------------
+
+kubectl exec -it <mysql-pod> /bin/sh
+
 mysql -p
-create database test
+create database test;
+use test;
 create table testdata (id int not null auto_increment primary key,name varchar(25),lucky int);
 insert into testdata values(null, 'Iam7Hills', 23);
