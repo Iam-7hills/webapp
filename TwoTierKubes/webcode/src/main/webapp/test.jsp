@@ -11,11 +11,11 @@ select id, foo, bar from testdata
   </head>
   <body>
 
-  <h2>Results</h2>
+  <h2>TOMCAT and MYSQL - TWO TIER</h2>
 
 <c:forEach var="row" items="${rs.rows}">
-    Foo ${row.foo}<br/>
-    Bar ${row.bar}<br/>
+    NAME ${row.foo}<br/>
+    ID ${row.bar}<br/>
 </c:forEach>
 
   </body>
