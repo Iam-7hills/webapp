@@ -2,22 +2,20 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 <sql:query var="rs" dataSource="jdbc/TestDB">
-select id, name, lucky from 7hillstable
+select id, foo, bar from testdata
 </sql:query>
 
 <html>
   <head>
-    <title>Tomcat and MY SQL integration - DevOps</title>
+    <title>DB Test</title>
   </head>
   <body>
 
-  <h2>Tomcat and MY SQL integration - DevOps</h2>
-<br/>
-<h2>Results</h2>
+  <h2>Results</h2>
 
 <c:forEach var="row" items="${rs.rows}">
-    NAME: ${row.name}<br/>
-    Favorite: ${row.lucky}<br/>
+    Foo ${row.foo}<br/>
+    Bar ${row.bar}<br/>
 </c:forEach>
 
   </body>
